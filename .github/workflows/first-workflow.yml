@@ -2,7 +2,11 @@ name: first workflow
 on:
   push:
     branches:
-      - "main" 
+      - "main"
+  pull-request:
+    branches:
+      - "feature" 
+    types: [opened, closed]        
 jobs:
   first-workflow-job:
     name: first job      
